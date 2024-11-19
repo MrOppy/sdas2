@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #000;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Plyr Customization */
+.plyr {
+  --plyr-color-main: #e879f9;
+  --plyr-video-background: rgba(255, 255, 255, 0.05);
+  --plyr-menu-background: rgba(255, 255, 255, 0.1);
+  --plyr-menu-color: white;
+  --plyr-tooltip-background: rgba(255, 255, 255, 0.1);
+  --plyr-tooltip-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.plyr--video {
+  height: 100%;
+  background: transparent !important;
+}
+
+.plyr__control {
+  background: #db2777 !important;
+  color: white !important;
+  border-radius: 9999px !important;
+  transition: all 0.3s !important;
+}
+
+.plyr__control svg {
+  color: white !important;
+  fill: white !important;
+}
+
+.plyr__control:hover {
+  background: #be185d !important;
+  transform: scale(1.1);
+}
+
+.plyr__progress__buffer,
+.plyr__volume--display {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.plyr--full-ui input[type=range] {
+  color: #e879f9;
+}
+
+.plyr__menu__container {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.plyr__menu__container .plyr__control {
+  background: transparent !important;
+}
+
+.plyr__menu__container .plyr__control--forward::after,
+.plyr__menu__container .plyr__control--back::before {
+  border-left-color: rgba(255, 255, 255, 0.8);
+}
+
+.plyr__menu__container .plyr__control--forward:hover::after,
+.plyr__menu__container .plyr__control--back:hover::before {
+  border-left-color: #e879f9;
+}
+
+/* Force player controls to be visible on hover */
+.plyr__controls {
+  opacity: 0 !important;
+  visibility: visible !important;
+  transform: none !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem !important;
+  gap: 0.5rem !important;
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.plyr:hover .plyr__controls {
+  opacity: 1 !important;
+}
+
+.plyr__time {
+  color: white !important;
+  font-size: 0.875rem !important;
+  padding: 0 0.5rem !important;
+}
+
+/* Progress bar styling */
+.plyr__progress {
+  --plyr-progress-loading-background: rgba(255, 255, 255, 0.25);
+  --plyr-progress-loading-size: 25px;
+}
+
+.plyr__progress__buffer {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.plyr__progress input[type=range]::-webkit-slider-thumb {
+  background: #e879f9 !important;
+}
+
+/* Fullscreen button styling */
+.plyr__control--fullscreen {
+  background: #db2777 !important;
+}
+
+.plyr__control--fullscreen:hover {
+  background: #be185d !important;
+}
