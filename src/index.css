@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #000;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Plyr Customization */
+.plyr {
+  --plyr-color-main: #e879f9;
+  --plyr-video-background: rgba(255, 255, 255, 0.05);
+  --plyr-menu-background: rgba(255, 255, 255, 0.1);
+  --plyr-menu-color: white;
+  --plyr-tooltip-background: rgba(255, 255, 255, 0.1);
+  --plyr-tooltip-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.plyr--video {
+  height: 100%;
+  background: transparent !important;
+}
+
+.plyr__control {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.plyr__control svg {
+  color: white !important;
+  fill: white !important;
+}
+
+.plyr__control:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.plyr__progress__buffer,
+.plyr__volume--display {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.plyr--full-ui input[type=range] {
+  color: #e879f9;
+}
+
+.plyr__menu__container {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.plyr__menu__container .plyr__control {
+  background: transparent !important;
+}
+
+.plyr__menu__container .plyr__control--forward::after,
+.plyr__menu__container .plyr__control--back::before {
+  border-left-color: rgba(255, 255, 255, 0.8);
+}
+
+.plyr__menu__container .plyr__control--forward:hover::after,
+.plyr__menu__container .plyr__control--back:hover::before {
+  border-left-color: #e879f9;
+}
+
+/* Force player controls to be visible */
+.plyr__controls {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
